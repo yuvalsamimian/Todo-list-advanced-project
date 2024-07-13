@@ -9,8 +9,13 @@
   <body>
     <div class="titlePic"></div>
     <div class="box1">
-      <form id="myForm" onsubmit="return addTodo(event)">
+      <form id="myForm" onsubmit="addTodo(event)">
         <h3>Enter Task & Deadline</h3>
+        <div>
+        <label for="topic">Topic</label>
+        <input type="text" id="topic" class="topicForm" placeholder="Enter Topic" required maxlength="20">
+    </div>
+    <div>
         <label for="todoInput">Task</label>
         <textarea
           type="text"
@@ -18,13 +23,14 @@
           placeholder="Enter Task"
           required
         ></textarea>
+    </div>
         <div>
             <label for="date">Date</label>
           <input type="date" id="date" required />
           <label for="time">Time</label>
           <input type="time" id="time" required />
         </div>
-        <div>
+        <div class="buttonsForm">
           <button type="submit">Add</button>
           <button type="reset">Reset</button>
         </div>

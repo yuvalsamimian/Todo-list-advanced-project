@@ -40,19 +40,20 @@ body {
   border-radius: 20px;
   margin-left: 32%;
   align-items: center;
-  padding: px;
+  padding: 14px;
 }
 
 .box1 form input {
   border: none;
   border-radius: 20px;
   width: 150px;
-  margin: 10px;
+  margin: 9px;
   text-align: center;
-  font-family: "wallNotes";
+  font-family:'Times New Roman', Times, serif;
   background-image: linear-gradient(white, gold);
   opacity: 0.9;
 }
+
 
 .box1 form textarea {
     color: black;
@@ -104,14 +105,14 @@ body {
 }
 
   .textAreaContent {
-  margin-top: 40px;
-  margin-left: 12px;
-  height: 200px;
-  width: 160px;
-  text-align: center;
-  overflow-x: hidden;
-  overflow-y: auto;
-  font-family: cursive;
+    margin-top: 24px;
+    margin-left: 12px;
+    height: 120px;
+    width: 160px;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: cursive;
 }
 
 .todoArea {
@@ -162,17 +163,6 @@ body {
   }
 }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 
 .deadlineDiv {
   position: absolute;
@@ -181,4 +171,14 @@ body {
   height: 20px;
   width: 100px;
   font-family: cursive;
+}
+
+.buttonsForm{
+    margin-left: 52px;
+}
+
+.topicClass{
+    text-align: center;
+    margin-top: 28px;
+    border-bottom: 2px solid black;
 }

@@ -1,4 +1,5 @@
 let todosArr = [];
+let topic = document.querySelector("#topic");
 let todoInput = document.querySelector("#todoInput");
 let date = document.querySelector("#date");
 let time = document.querySelector("#time");
@@ -14,7 +15,8 @@ function saveToLocalStorage() {
   localStorage.setItem("todosArr", JSON.stringify(todosArr));
 }
 
-function CreateNewTodo(newTodoName, newDate, newTime) {
+function CreateNewTodo(newTodoName, newDate, newTime, newTopic) {
+  this.topic = newTopic;
   this.name = newTodoName;
   this.date = newDate;
   this.time = newTime;
@@ -29,11 +31,12 @@ function addTodo(event) {
     return false;
   }
 
+  let newTopic = topic.value;
   let newTodoName = todoInput.value;
   let d = new Date(date.value);
   let newDate = `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
   let newTime = time.value;
-  let newTodo = new CreateNewTodo(newTodoName, newDate, newTime);
+  let newTodo = new CreateNewTodo(newTodoName, newDate, newTime, newTopic);
   todosArr.unshift(newTodo);
   saveToLocalStorage();
   showData("in", 0);
@@ -49,6 +52,7 @@ function showData(fade, fadeIndex) {
   for (let item of todosArr) {
     let todoDiv = document.createElement("div");
     todoDiv.innerHTML = `
+      <h2 class ="topicClass">${item.topic}</h2>
       <p class="textAreaContent">${item.name}</p>
       <div class="deadlineDiv">
         ${item.date} <br>
@@ -62,9 +66,6 @@ function showData(fade, fadeIndex) {
       if (fade === "in") {
         todoDiv.classList.add("newClassTodo");
       }
-      if (fade === "out") {
-        todoDiv.classList.add("removeClassTodo");
-      }
     }
     todosArea.appendChild(todoDiv);
     index++;
@@ -74,5 +75,5 @@ function showData(fade, fadeIndex) {
 function removeItem(index) {
   todosArr.splice(index, 1);
   saveToLocalStorage();
-  showData("out", index);
+  showData();
 }
