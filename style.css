@@ -49,14 +49,13 @@ body {
   width: 150px;
   margin: 9px;
   text-align: center;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   background-image: linear-gradient(white, gold);
   opacity: 0.9;
 }
 
-
 .box1 form textarea {
-    color: black;
+  color: black;
   border: none;
   text-align: center;
   border-radius: 20px;
@@ -92,7 +91,7 @@ body {
 }
 
 .todoDiv {
-  position: relative; /* Allows absolute positioning of child elements */
+  position: relative;
   background-image: url(/assets/img/notebg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -100,19 +99,20 @@ body {
   height: 320px;
   max-height: 320px;
   align-items: center;
-  padding: 10px; /* Ensures content doesn't touch edges */
-  box-sizing: border-box; /* Ensures padding is included in width/height */
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-  .textAreaContent {
-    margin-top: 24px;
-    margin-left: 12px;
-    height: 120px;
-    width: 160px;
-    text-align: center;
-    overflow-x: hidden;
-    overflow-y: auto;
-    font-family: cursive;
+.textAreaContent {
+  margin-top: 24px;
+  margin-left: 12px;
+  height: 120px;
+  width: 160px;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: cursive;
+  word-wrap: break-word;
 }
 
 .todoArea {
@@ -123,17 +123,17 @@ body {
 }
 
 .todoDiv button {
-  position: absolute; /* Allows positioning at the top-right corner */
-  top: 28px; /* Positions at the top */
-  right: 5px; /* Positions at the right */
-  visibility: hidden; /* Hidden by default */
+  position: absolute;
+  top: 28px;
+  right: 5px;
+  visibility: hidden;
   background: none;
   border: none;
   cursor: pointer;
 }
 
 .todoDiv:hover button {
-  visibility: visible; /* Visible on hover */
+  visibility: visible;
 }
 
 .todoDiv button:hover {
@@ -163,7 +163,6 @@ body {
   }
 }
 
-
 .deadlineDiv {
   position: absolute;
   bottom: 35px;
@@ -173,12 +172,14 @@ body {
   font-family: cursive;
 }
 
-.buttonsForm{
-    margin-left: 52px;
+.buttonsForm {
+  margin-left: 52px;
 }
 
-.topicClass{
-    text-align: center;
-    margin-top: 28px;
-    border-bottom: 2px solid black;
+.topicClass {
+  text-align: center;
+  margin-top: 28px;
+  border-bottom: 2px solid black;
+  word-wrap: break-word;
+  max-width: 100%;
 }

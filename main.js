@@ -25,9 +25,7 @@ function CreateNewTodo(newTodoName, newDate, newTime, newTopic) {
 function addTodo(event) {
   event.preventDefault();
 
-  // Check if the form is valid
   if (!myForm.checkValidity()) {
-    // If the form is invalid, let the browser show validation messages
     return false;
   }
 
@@ -77,5 +75,3 @@ function removeItem(index) {
   saveToLocalStorage();
   showData();
 }
-
-
