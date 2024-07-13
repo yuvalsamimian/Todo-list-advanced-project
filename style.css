@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "signaFont";
+  src: url("assets/fonts/Authentic Signature.ttf");
+}
+
+@font-face {
+  font-family: "valentine";
+  src: url("assets/fonts/Valentime.otf");
+}
+
+@font-face {
+  font-family: "wallNotes";
+  src: url("assets/fonts/Wall Notes.otf");
+}
+
+@font-face {
+  font-family: "playwrite";
+  src: url("assets/fonts/PlaywriteUSTrad-VariableFont_wght.ttf");
+}
+
+body {
+  background-image: url(/assets/img/tile.jpg);
+}
+
+.titlePic {
+  background-image: url(/assets/img/title.png);
+  height: 80px;
+  width: 300px;
+  background-repeat: no-repeat;
+  margin-left: 40%;
+}
+.box1 form {
+  font-family: "wallNotes";
+  background-image: url(/assets/img/formbg.jpg);
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 20px;
+  margin-left: 32%;
+  align-items: center;
+  padding: px;
+}
+
+.box1 form input {
+  border: none;
+  border-radius: 20px;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  font-family: "wallNotes";
+  background-image: linear-gradient(white, gold);
+  opacity: 0.9;
+}
+
+.box1 form textarea {
+    color: black;
+  border: none;
+  text-align: center;
+  border-radius: 20px;
+  width: 350px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-image: linear-gradient(white, gold);
+  opacity: 0.9;
+}
+
+.box1 form textarea:hover {
+  background-image: linear-gradient(gold, white);
+}
+
+.box1 form input:hover {
+  border: none;
+  background-image: linear-gradient(gold, white);
+  border-radius: 20px;
+}
+
+.box1 form button {
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  font-family: fantasy;
+  background-image: linear-gradient(white, gold);
+  opacity: 0.9;
+}
+
+.box1 form button:hover {
+  border: none;
+  background-image: linear-gradient(gold, white);
+  border-radius: 20px;
+}
+
+.todoDiv {
+  position: relative; /* Allows absolute positioning of child elements */
+  background-image: url(/assets/img/notebg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 320px;
+  max-height: 320px;
+  align-items: center;
+  padding: 10px; /* Ensures content doesn't touch edges */
+  box-sizing: border-box; /* Ensures padding is included in width/height */
+}
+
+  .textAreaContent {
+  margin-top: 40px;
+  margin-left: 12px;
+  height: 200px;
+  width: 160px;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: cursive;
+}
+
+.todoArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 4px;
+  margin: 4px;
+}
+
+.todoDiv button {
+  position: absolute; /* Allows positioning at the top-right corner */
+  top: 28px; /* Positions at the top */
+  right: 5px; /* Positions at the right */
+  visibility: hidden; /* Hidden by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.todoDiv:hover button {
+  visibility: visible; /* Visible on hover */
+}
+
+.todoDiv button:hover {
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+}
+
+.newClassTodo {
+  animation: fadeIn 3s;
+}
+
+.removeClassTodo {
+  animation: fadeOut 3s;
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.deadlineDiv {
+  position: absolute;
+  bottom: 35px;
+  left: 10px;
+  height: 20px;
+  width: 100px;
+  font-family: cursive;
+}
